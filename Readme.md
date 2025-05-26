@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
-* Студент: [Илья Конев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2274609).
-* Наставник: `Неизвестно`.
+- Студент: [Илья Конев](https://up.htmlacademy.ru/htmlcss-individual/2/user/2274609).
+- Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
 
 ---
 
