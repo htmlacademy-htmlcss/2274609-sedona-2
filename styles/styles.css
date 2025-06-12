@@ -1,0 +1,524 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+  background-color:  #f2f2f2;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #756157;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* коментарий-напоминание:
+  у всех кнопок одинаковые внутренние отступы сверху и снизу
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  */
+}
+
+.button:disabled {
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+/* Как лучше разметить РЕЙТИНГ, в карточке гостицы, сылкой, кнопкой или абзацем?
+В ТЗ ничего нет, а из стайлгайда и мокета можно предположить, что это кнопка
+с атрибутом disabled. С другой стороны я не знаю, что должно произойти при клоке на нее:
+-открыться какой то попап с рейтингом гостиниц;
+-случится переход на другую страницу с рейтингом;
+-ничего не произойти, это просто абзац стилизованный под кнопку.
+Переделал из абзаца в кнопку с атрибутом disabled.
+Как поступать в таких случаях? */
+
+/* header */
+.page-header {
+  background-color: #ffffff;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: #000000;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.like-count {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+
+  color: #ffffff;
+  background-color: #7db54f;
+}
+
+.button-navigation-favorite {
+  color: #ffffff;
+  background-color: #756157;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* main */
+
+.site-main {
+  background-color: #ffffff;
+}
+
+/* main section hero */
+
+.hero {
+  background-image: url("../image/mask.svg"), url("../image/main/hero_background.jpg");
+  background-size: 100% auto;
+  background-position: center bottom, center top;
+  background-repeat: no-repeat;
+}
+
+/*Я уже задавал вопрос про section и div.
+Я правильно понял, что на section можно навешивать CSS правила
+и не нужно дополнительно все оборачивать в div? */
+
+/* main section advantages */
+
+.slogan-text-advantages {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-advantages {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  text-align: center;
+  color: #333333;
+}
+
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.2);
+  text-align: center;
+}
+
+.title-advantages-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+
+  text-transform: uppercase;
+}
+
+.text-advantages-item {
+  font-weight: 400;
+
+  color: #333333;
+}
+
+.advantages-item:nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);;
+}
+
+.advantages-item:first-child, .advantages-item:last-child {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantages-item:first-child .text-advantages-item, .advantages-item:last-child .text-advantages-item {
+  color: #ffffff;
+}
+
+/* main section service */
+
+.slogan-text-service {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Вопрос: CSS правила для .slogan-text-service и .slogan-text-advantages совпадают.
+Как лучше оставить их с разными классами, т.к. разные секции и прописывать правила
+по отдельности или изменить имя класса и задавать правила в одном месте?
+Аналогичная ситуация для .text-service и .text-advantages и т.д.
+
+И такой момент для кнопок: я как раз все общее прописал в одном месте, а отличия
+в background-color, размерах шрифта меняю точечно для каждой конкретной кнопки.
+Как лучше делать? Что то я тут запутался */
+
+.text-service {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  text-align: center;
+  color: #333333;
+}
+
+.service-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  text-align: center;
+}
+
+.title-service-item {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.text-service-item {
+  font-weight: 400;
+  color: #333333;
+}
+
+.service-item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+/* main section search-hotel */
+
+.slogan-text-search-hotel {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-search-hotel {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  text-align: center;
+  color: #333333;
+}
+
+.button-search-hotel {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* footer */
+
+.site-footer {
+  background-color: #ffffff;
+}
+
+/* subscription-footer */
+
+.subscription-footer {
+  background-image: url("../image/main/footer_form_background.jpg");
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.title-subscription-footer {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #ffffff;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-subscription-footer {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.button-subscription {
+  background-color: #82b3d3;
+
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* contacts-footer */
+
+.footer-social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-address {
+  font-style: normal;
+}
+
+.footer-phone {
+  color: #000000;
+
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+
+  text-decoration: none;
+}
+
+/* catalog.html */
+
+.main-inner {
+  background-color: #ffffff;
+}
+
+.inner-container {
+  background-image: url("../image/catalog/form_background.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+/* inner-header */
+
+.inner-header {
+  color: #ffffff;
+}
+
+.title-inner-header {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  color: #ffffff;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+
+  text-decoration: none;
+}
+
+/* catalog */
+.form-catalog {
+  color: #ffffff;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  text-transform: capitalize;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.control {
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.button-form-catalog-submit {
+  background-color: #82b3d3;
+}
+
+.button-form-catalog-reset {
+  background-color: inherit;
+}
+
+.text-sort {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-transform: uppercase;
+}
+
+.select-control {
+  font-weight: 400;
+
+  color: #333333;
+}
+
+.catalog-card-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-card-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.product-card-text, .product-card-price {
+  font-weight: 400;
+  color: #333333;
+}
+
+.product-card-button {
+  text-decoration: none;
+}
+
+.button-favorite {
+  background-color: #82b3d3;
+}
+
+.button-favorite-active {
+  background-color: #7db54f;
+}
+
+.button-rating {
+  font-weight: 400;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination-link {
+  color: #ffffff;
+  background-color: #82b3d3;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-dots {
+  color: #000000;
+  background-color: inherit;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* footer */
+
+.page-footer {
+  background-color: #ffffff;
+}
+
+/* section subscription-footer */
+
+.subscription-page-footer {
+  background-image: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.title-subscription-page-footer {
+  color: inherit;
+
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.text-subscription-page-footer {
+  color: #333333;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+
+  text-align: center;
+}
+
+.form-subscription-page-footer .field {
+  background-color: #f2f2f2;
+}
