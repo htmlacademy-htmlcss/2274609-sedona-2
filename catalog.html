@@ -49,7 +49,7 @@
             <h1 class="title-inner-header">Гостиницы Седоны</h1>
             <ul class="breadcrumbs-list">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">Главная</a>
+                <a class="breadcrumbs-link visually-hidden" href="index.html">Главная</a>
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
@@ -130,17 +130,17 @@
         </select>
         <ul class="catalog-card-list">
           <li class="catalog-card-item">
-            <a class="catalog-card catalog-card-active" href="catalog.html?view=card">
+            <a class="catalog-link catalog-card catalog-card-active" href="catalog.html?view=card">
               <span class="visually-hidden">Показать карточки</span>
             </a>
           </li>
           <li class="catalog-card-item">
-            <a class="catalog-tield" href="catalog.html?view=tile">
+            <a class="catalog-link catalog-tield" href="catalog.html?view=tile">
               <span class="visually-hidden">Показать плитку</span>
             </a>
           </li>
           <li class="catalog-card-item">
-            <a class="catalog-list" href="catalog.html?view=list">
+            <a class="catalog-link catalog-list" href="catalog.html?view=list">
               <span class="visually-hidden">Показать список</span>
             </a>
           </li>
@@ -157,7 +157,7 @@
             <a class="button product-card-button" href="#">Подробнее</a>
             <button class="button button-favorite" type="button">В избранное</button>
             <span class="visually-hidden">Звезды рейтинга</span>
-            <button class="button button-rating" type="button" disabled>Рейтинг: 8,5</button>
+            <p class="product-card-rating">Рейтинг: 8,5</p>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -170,7 +170,7 @@
             <a class="button product-card-button" href="#">Подробнее</a>
             <button class="button button-favorite button-favorite-active" type="button">В избранном</button>
             <span class="visually-hidden">Звезды рейтинга</span>
-            <button class="button button-rating" type="button" disabled>Рейтинг: 9,2</button>
+            <p class="product-card-rating">Рейтинг: 9,2</p>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -183,7 +183,7 @@
             <a class="button product-card-button" href="#">Подробнее</a>
             <button class="button button-favorite" type="button">В избранное</button>
             <span class="visually-hidden">Звезды рейтинга</span>
-            <button class="button button-rating" type="button" disabled>Рейтинг: 6,9</button>
+            <p class="product-card-rating">Рейтинг: 6,9</p>
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
@@ -196,7 +196,7 @@
             <a class="button product-card-button" href="#">Подробнее</a>
             <button class="button button-favorite" type="button">В избранное</button>
             <span class="visually-hidden">Звезды рейтинга</span>
-            <button class="button button-rating" type="button" disabled>Рейтинг: 5,0</button>
+            <p class="product-card-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
         <ul class="pagination">
@@ -223,9 +223,9 @@
       </main>
       <footer class="page-footer">
         <section class="subscription-page-footer">
-          <h2 class="title-subscription-page-footer">Подпишитесь на рассылку</h2>
-          <p class="text-subscription-page-footer">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="form-subscription-page-footer" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="slogan title-subscription-page-footer">Подпишитесь на рассылку</h2>
+          <p class="slogan-content text-subscription-page-footer">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <form class="form-subscription-footer form-subscription-page-footer" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscription-email">Email</label>
             <input class="field" type="email" name="subscription-email" id="subscription-email" placeholder="Ваш e-mail"
               required>
