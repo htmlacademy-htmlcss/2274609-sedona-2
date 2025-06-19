@@ -14,64 +14,82 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  min-height: 100%;
   margin: 0;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-
   color: #000000;
+
   background-color:  #f2f2f2;
 }
 
+.wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
 .button {
-  color: #ffffff;
-  background-color: #756157;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-
-  text-align: center;
-  text-transform: uppercase;
-
   /* коментарий-напоминание:
   у всех кнопок одинаковые внутренние отступы сверху и снизу
   padding-top: 8px;
   padding-bottom: 8px;
-
   */
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #756157;
 }
 
 .slogan {
-  font-weight: 700;
+  margin: 0;
+
   font-size: 30px;
   line-height: 36px;
-
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
 }
 
 .slogan-content {
-  font-weight: 400;
+  margin: 0;
+
   font-size: 22px;
   line-height: 26px;
-
+  font-weight: 400;
   text-align: center;
   color: #333333;
 }
 
 .title {
-  font-weight: 700;
+  width: 230px;
+  margin: 0 auto;
+
   font-size: 24px;
   line-height: 28px;
-
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .text {
+  width: 230px;
+  margin: 0 auto;
+
   font-weight: 400;
   color: #333333;
 }
@@ -82,30 +100,49 @@ body {
 }
 
 .navigation {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.logo-header {
+  width: 140px;
+  margin-right: 28px;
 }
 
 .navigation-list {
+  width: 339px;
   margin: 0;
   padding: 0;
+  margin-right: 285px;
+
   list-style: none;
 }
 
 .navigation-link {
-  color: #000000;
-
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
+  color: #000000;
+}
+
+.navigation-user {
+  width: 268px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+
+  list-style: none;
 }
 
 .like-count {
-  font-weight: 400;
   font-size: 10px;
   line-height: 10px;
-
+  font-weight: 400;
   color: #ffffff;
+
   background-color: #7db54f;
 }
 
@@ -119,6 +156,10 @@ body {
   background-color: #ffffff;
 }
 
+.main-container {
+  flex-grow: 1; /* сделал главную-коробку жадной, теперь футер приколочен к полу */
+}
+
 /* main section hero */
 
 .hero {
@@ -129,44 +170,83 @@ body {
   background-color: #f2f2f2;
 }
 
+.picture-hero {
+  display: block;
+  margin: 0 auto;
+}
+
 /* main section advantages */
 
 .advantages-list {
+  display: flex;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.2);
+  width: 400px;
+
   text-align: center;
+
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item:nth-child(2n) {
   background-color: rgba(131, 179, 211, 0.12);;
 }
 
-.advantages-item.is-image {
-  color: #ffffff;
+.is-image {
+  display: flex;
+  width: 1200px;
+
   background-color: #82b3d3;
 }
 
-.advantages-item.is-image .title-advantages-item,
-.advantages-item.is-image .text-advantages-item {
+.is-image h3,
+.is-image p {
   color: #ffffff;
+}
+
+.advantages-item-container {
+  width: 400px;
+}
+
+/* здесь необходимо прописать ширину второго флек-элемента с картинкой или можно опустить? */
+
+.advantages-item-img {
+width: 800px;
+}
+
+.is-image-even {
+  flex-direction: row-reverse;
 }
 
 /* main section service */
 
 .service-list {
+  display: flex;
+  width: 1200px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
 .service-item {
-  background-color: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  /* не понятно надо прописывать ширину явно для флекс-элемента в этом контейнере или можно опустить
+  флекс-контейр распределить все пространство поровну между флекс-элементами. А их здесь три
+  и ширина будет равна 400. А если добавится четвертый флекс-элемент флекс-контейнер пережмет это
+  значение до 300. Т.к. не разрешен перенос элементов при переполнении контейнера. Т.е. получается
+  необходимо флекс-контейнеру разрешить перенос и прописать свойство flex-wrap: wrap? */
+
   text-align: center;
+
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .service-item:nth-child(2n) {
@@ -176,6 +256,9 @@ body {
 /* main section search-hotel */
 
 .button-search-hotel {
+  display: block;
+  margin: 0 auto;
+
   font-size: 20px;
   line-height: 36px;
 }
@@ -188,7 +271,7 @@ body {
 
 /* subscription-footer */
 
-.subscription-footer {
+.footer-image-container {
   background-image: url("../image/main/form_main_footer.jpg");
   background-size: cover;
   background-position: center top;
@@ -201,51 +284,69 @@ body {
   color: #ffffff;
 }
 
+.form-subscription-footer {
+  width: 684px;
+  margin: 0 auto;
+}
+
 .form-subscription-footer input {
   font-family: inherit;
-  font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400;
+  color: #000000;
 
   background-color: #f2f2f2;
-  color: #000000;
 
   /* ecть opacity
   не забыть вставить когда дойду до форм */
 }
 
 .button-subscription {
-  background-color: #82b3d3;
-
   font-size: 20px;
   line-height: 36px;
+
+  background-color: #82b3d3;
 }
 
 /* contacts-footer */
 
+.contacts-footer {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
 .footer-social-list {
+  width: 142px;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .footer-social-link {
-  color: #000000;
   text-decoration: none;
+  color: #000000;
 }
 
 .footer-address {
+  width: 331px;
+
   font-style: normal;
 }
 
 .footer-phone {
-  color: #000000;
-
-  font-weight: 400;
   font-size: 40px;
   line-height: 40px;
-
+  font-weight: 400;
   text-decoration: none;
+  color: #000000;
+}
+
+.copyright {
+  width: 115px;
 }
 
 /* catalog.html */
@@ -265,70 +366,107 @@ body {
 /* inner-header */
 
 .inner-header {
+  width: 1060px;
+  margin: 0 auto;
+
   color: #ffffff;
+
 }
 
 .title-inner-header {
-  font-weight: 700;
+  margin: 0;
+
   font-size: 60px;
   line-height: 78px;
+  font-weight: 700;
 }
 
 .breadcrumbs-list {
+  display: flex;
+  width: 1060px;
+  /* норм задать всю доступную ширину шапки или надо задавать по макету? */
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .breadcrumbs-item {
-  font-weight: 400;
+  margin-right: 28px;
+
   font-size: 16px;
   line-height: 21px;
+  font-weight: 400;
 }
 
 .breadcrumbs-link {
-  color: #ffffff;
   text-decoration: none;
+  color: #ffffff;
 }
 
 /* catalog */
-.form-catalog {
+.form-catalog-hotel {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+
   color: #ffffff;
 }
 
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
 .catalog-filter-title {
-  font-weight: 700;
+  padding: 0;
+
   font-size: 20px;
   line-height: 24px;
-
+  font-weight: 700;
   text-transform: capitalize;
 }
 
 .catalog-filter-list {
+  width: 150px;
   margin: 0;
   padding: 0;
+  margin-right: 70px;
+
   list-style: none;
 }
 
 .control {
-  font-weight: 400;
   line-height: 23px;
+  font-weight: 400;
+}
+
+.price-container {
+  width: 288px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .price-input {
   font-family: inherit;
-  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
-
+  font-weight: 700;
   color: #000000;
+
   background-color: #f2f2f2;
 }
 
 .price {
-  font-weight: 400;
   line-height: 24px;
+  font-weight: 400;
   /* есть opacity 0.3 */
+}
+
+.button-container {
+  width: 191px;
 }
 
 .button-form-catalog-submit {
@@ -339,26 +477,43 @@ body {
   background-color: inherit;
 }
 
+.product-container {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.header-product-sort {
+  display: flex;
+  /* нужно задавать ширину явно или можно наследовать от родителя? */
+}
+
 .text-sort {
-  font-weight: 700;
+  width: 338px;
+  margin: 0;
+  margin-right: 200px;
+
   font-size: 30px;
   line-height: 36px;
-
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .select-control {
+  width: 292px;
+
   font-family: inherit;
-  font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-
+  font-weight: 400;
   color: #333333;
 }
 
 .catalog-card-list {
+  width: 160px;
   margin: 0;
   padding: 0;
+  margin-left: auto;
+
   list-style: none;
 }
 
@@ -368,9 +523,18 @@ body {
 }
 
 .product-list {
+  display: flex;
+  width: 1060px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+
   list-style: none;
+}
+
+.product-card {
+  width: 340px;
 }
 
 .product-card-link {
@@ -379,9 +543,9 @@ body {
 }
 
 .product-card-title {
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
+  font-weight: 700;
 }
 
 .product-card-text,
@@ -395,41 +559,56 @@ body {
 }
 
 .button-favorite {
+  width: 140px;
+
   background-color: #82b3d3;
 }
 
 .button-favorite-active {
+  width: 140px;
+
   background-color: #7db54f;
 }
 
 .product-card-rating {
+  width: 140px;
+
   font-weight: 400;
-
-  background-color: #f2f2f2;
-  color: #333333;
-
   text-align: center;
   text-transform: uppercase;
+  color: #333333;
+
+  background-color: #f2f2f2;
 }
 
 
 .pagination {
+  display: flex;
+  width: 1060px;
   margin: 0;
   padding: 0;
+  gap: 8px;
+
   list-style: none;
 }
 
-.pagination-link {
-  color: #ffffff;
-  background-color: #82b3d3;
+.pagination-item {
+  width: 60px;
+}
 
-  font-weight: 700;
+.pagination-link {
+  display: block;
+  width: 60px;
+
   font-size: 20px;
   line-height: 36px;
-
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: #82b3d3;
 }
 
 .pagination-current {
@@ -438,28 +617,16 @@ body {
 }
 
 .pagination-dots {
-  color: #000000;
-  background-color: inherit;
-
-  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: inherit;
 }
 
 /* footer */
 
 .page-footer {
   background-color: #ffffff;
-}
-
-/* section subscription-footer */
-
-.subscription-page-footer {
-  background-image: none;
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.text-subscription-page-footer {
-  color: #333333;
 }

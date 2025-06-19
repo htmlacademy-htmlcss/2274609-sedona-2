@@ -25,7 +25,7 @@
               <a class="navigation-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-          <ul class="navigation-list navigation-user">
+          <ul class="navigation-user">
             <li class="navigation-item">
               <a class="navigation-link" href="#">
                 <span class="visually-hidden">Поиск</span>
@@ -43,20 +43,28 @@
           </ul>
         </nav>
       </header>
-      <main class="site-main">
+      <main class="site-main main-container">
         <section class="hero">
           <h1 class="title-hero visually-hidden">Гостиницы Седоны</h1>
-          <img class="picture-hero" src="image/welcome.svg" width="548" height="352"
+          <img class="picture-hero" src="image/welcome.svg" width="458" height="352"
             alt="Добро пожаловать в великолепную Седону">
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества Седоны</h2>
           <!--slogan - это лозунг, хотя и смотрится как транслит-->
-          <p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="slogan-content">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+
+          <!--Комметарий к вопросу про перенос текста заданием ширины или тегом br
+          Как я понимаю слоганам можно и не задавать ширину параграфа, т.к. если предположить что вдальнейшем их содержимое
+          сменится, то не факт что оно впишется в ранее заданую ширину и тогда придется менять ширину, а если еще и дизайн будет предусматривать
+          принудительный перенос не завязанный на ширину, придется добавлять и br. На мой взгляд в данном случае лучше прописать переносы
+          в разметке через br. И второй плюс к этому решению эти параграфы на всей странице находятся в общем потоке документа и
+          ни как не перестраиваются по дизайну макета. Вот в таких случаях, как поступаем? Что будет оптимальным решением?-->
+
+          <p class="slogan">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
+          <p class="slogan-content">Рассмотрим причины, по которым Седона круче, чем
+            Гранд-Каньон!</p>
           <ul class="advantages-list">
             <li class="advantages-item is-image">
-              <!--добавил первому и последнему элементу списка обертку, возможно пригодится-->
               <div class="advantages-item-container">
                 <h3 class="title title-advantages-item">Настоящий городок</h3>
                 <p class="text text-advantages-item">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
@@ -65,18 +73,18 @@
                 alt="Вид на террасу городского банка">
             </li>
             <li class="advantages-item">
-              <h3 class="title">Небольшая площадь</h3>
-              <p class="text">Все достопримечательности находятся очень близко</p>
+              <h3 class="title title-advantages-item">Небольшая площадь</h3>
+              <p class="text text-advantages-item">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="advantages-item">
-              <h3 class="title">Красивая дорога</h3>
-              <p class="text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <h3 class="title title-advantages-item">Красивая дорога</h3>
+              <p class="text text-advantages-item">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="advantages-item">
-              <h3 class="title">Мало туристов</h3>
-              <p class="text">Большинство едет в Гранд Каньон и толпится там</p>
+              <h3 class="title title-advantages-item">Мало туристов</h3>
+              <p class="text text-advantages-item">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="advantages-item is-image">
+            <li class="advantages-item is-image is-image-even">
               <div class="advantages-item-container">
                 <h3 class="title title-advantages-item">Там есть мост дьявола</h3>
                 <p class="text text-advantages-item">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
@@ -88,44 +96,44 @@
         </section>
         <section class="service">
           <h2 class="visually-hidden">Услуги туристам</h2>
-          <p class="slogan">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
+          <p class="slogan">Приезжайте в Седону отдохнуть<br> в комфорте и уюте!</p>
           <p class="slogan-content">Опытный персонал и качественное обслуживание!</p>
           <ul class="service-list">
             <li class="service-item">
               <h3 class="title">Жильё</h3>
-              <p class="text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="text">Рекомендуем пожить<br> в настоящем мотеле,<br> всё как в кино!</p>
             </li>
             <li class="service-item">
               <h3 class="title">Еда</h3>
-              <p class="text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="text">Всегда заказывайте<br> топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="service-item">
               <h3 class="title">Сувениры</h3>
-              <p class="text">Не только китайского, но и настоящего местного производства!</p>
+              <p class="text">Не только китайского,<br> но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
         <section class="search-hotel">
           <h2 class="visually-hidden">Поиск гостиницы</h2>
-          <!--оставил вторые классы навсякий случай если не понадобится не забыть удалить-->
-          <p class="slogan slogan-search-hotel">Заинтересовались?
-          </p>
-          <p class="slogan-content slogan-content-search-hotel">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц
-            в Седоне</p>
+          <p class="slogan">Заинтересовались?</p>
+          <p class="slogan-content">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="button button-search-hotel" type="button">Поиск гостиницы в Седоне</button>
         </section>
       </main>
       <footer class="site-footer">
-        <section class="subscription-footer">
-          <h2 class="slogan title-subscription-footer">Подпишитесь на рассылку</h2>
-          <p class="slogan-content text-subscription-footer">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="form-subscription-footer" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="visually-hidden" for="subscription-email">Email</label>
-            <input class="field" type="email" name="subscription-email" id="subscription-email" placeholder="Ваш e-mail"
-              required>
-            <button class="button button-subscription" type="submit">Подписаться</button>
-          </form>
-        </section>
+        <div class="footer-image-container">
+          <section class="subscription-footer">
+            <h2 class="slogan title-subscription-footer">Подпишитесь на рассылку</h2>
+            <p class="slogan-content text-subscription-footer">Только полезная информация и никакого спама, честное
+              бойскаутское!</p>
+            <form class="form-subscription-footer" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="subscription-email">Email</label>
+              <input class="field" type="email" name="subscription-email" id="subscription-email"
+                placeholder="Ваш e-mail" required>
+              <button class="button button-subscription" type="submit">Подписаться</button>
+            </form>
+          </section>
+        </div>
         <section class="contacts-footer">
           <h2 class="visually-hidden">Контакты</h2>
           <ul class="footer-social-list">
@@ -156,4 +164,5 @@
       </footer>
     </div>
   </body>
+
 </html>
