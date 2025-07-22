@@ -84,6 +84,8 @@ body {
 
 .button:disabled {
   background-color: #e5e5e5;
+  cursor: default;
+  color: #ffffff;
 }
 
 .link-state:hover,
@@ -195,7 +197,7 @@ body {
 
 .navigation-link-active::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 2px;
 
   bottom: -1px;
@@ -203,6 +205,11 @@ body {
   right: 16px;
 
   background-color: #756257;
+}
+
+.navigation-link-active:hover {
+  cursor: default;
+  color: #000000;
 }
 
 .navigation-user {
@@ -286,7 +293,7 @@ body {
 }
 
 .main-container {
-  flex-grow: 1; /* сделал главную-коробку жадной, теперь футер приколочен к полу */
+  flex-grow: 1;
 }
 
 /* main section hero */
@@ -299,7 +306,7 @@ body {
   background-size: 100% auto, cover;
   background-position: center bottom, center top;
   background-repeat: no-repeat;
-  background-color: #f2f2f2;
+  background-color: #999999;
 }
 
 .picture-hero {
@@ -354,8 +361,12 @@ body {
   margin-bottom: 62px;
 }
 
+.text-advantages-item {
+  width: 230px;
+}
+
 .advantages-item .title-advantages-item::after {
-  content: '';
+  content: "";
   position:absolute;
   width: 60px;
   height: 2px;
@@ -450,15 +461,15 @@ body {
 }
 
 .service-icon-one {
-  background-image: url('../image/icons/main_service_house.svg');
+  background-image: url("../image/icons/main_service_house.svg");
 }
 
 .service-icon-two {
-  background-image: url('../image/icons/main_service_food.svg');
+  background-image: url("../image/icons/main_service_food.svg");
 }
 
 .service-icon-three {
-  background-image: url('../image/icons/main_service_souvenirs.svg');
+  background-image: url("../image/icons/main_service_souvenirs.svg");
 }
 
 .title-service-item {
@@ -515,12 +526,12 @@ body {
   padding-left: 258px;
 }
 
-.footer-image-container {
+.footer-image {
   background-image: url("../image/main/form_main_footer.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-color: #f2f2f2;
+  background-color: #999999;
 }
 
 .slogan-main-footer,
@@ -533,7 +544,7 @@ body {
 }
 
 .text-subscription-footer {
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 
 .form-subscription-footer {
@@ -588,13 +599,10 @@ body {
 
 .field:disabled {
   background-color: #e5e5e5;
-  opacity: 0.3;
 }
 
 .button-subscription:disabled {
   background-color: #e5e5e5;
-  color: #e5e5e5;
-  opacity: 0.3;
 }
 
 /* contacts-footer */
@@ -829,7 +837,7 @@ body {
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  content: '';
+  content: "";
   background-image: url("../image/icons/date.svg");
   background-size: 20px 20px;
 }
@@ -837,7 +845,10 @@ body {
 .control-booking-input {
   border: none;
   border-radius: 4px;
-  padding: 12px 20px;
+  padding-top: 12px;
+  padding-right: 45px;
+  padding-bottom: 12px;
+  padding-left: 12px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -886,7 +897,7 @@ body {
 }
 
 .field-guests {
-  padding: 14px 0;
+  padding: 14px 3px;
   border-radius: 0;
   box-sizing: border-box;
   appearance: none;
@@ -970,7 +981,7 @@ body {
 }
 
 .tooltip-text::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
@@ -1069,7 +1080,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  background-color: #000000;
+  background-color: #999999;
 
   padding-top: 35px;
   padding-right: 70px;
@@ -1121,7 +1132,7 @@ body {
 }
 
 .breadcrumbs-item:not(:last-child)::after {
-  content: '';
+  content: "";
   width: 8px;
   height: 20px;
   background-image: url("../image/icons/breadcrumbs_arrow.svg");
@@ -1138,6 +1149,11 @@ body {
 
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-link-hotel-active:hover {
+  cursor: default;
+  color: #ffffff;
 }
 
 /* catalog */
@@ -1226,7 +1242,7 @@ body {
 }
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
-  content: url("../image/icons/arrow-form.svg");
+  content: url("../image/icons/arrow_form.svg");
   position: absolute;
   left: 4px;
 }
@@ -1431,8 +1447,7 @@ body {
 
 .button-form-catalog-submit:disabled {
   background-color: #e5e5e5;
-  color: #e5e5e5;
-  opacity: 0.3;
+  color: #ffffff;
 }
 
 .button-form-catalog-reset {
@@ -1459,8 +1474,7 @@ body {
 }
 
 .button-form-catalog-reset:disabled {
-  color: #959595;
-  opacity: 0.3;
+  color: rgba(255,255,255, 0.1);
   background-color: inherit;
 }
 
@@ -1504,7 +1518,10 @@ body {
 
 .select-control {
   width: 100%;
-  padding: 12px 20px;
+  padding-top: 12px;
+  padding-right: 35px;
+  padding-bottom: 12px;
+  padding-left: 20px;
 
   font-family: inherit;
   font-size: 18px;
@@ -1517,7 +1534,7 @@ body {
   color: #333333;
   background-color: #ffffff;
 
-  background-image: url("../image/icons/select-arow.svg");
+  background-image: url("../image/icons/select_arow.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
   appearance: none;
@@ -1687,8 +1704,7 @@ body {
 
 .button-favorite:disabled {
   background-color: #e5e5e5;
-  color: #e5e5e5;
-  opacity: 0.3;
+  color: #ffffff;
 }
 
 .button-favorite-active {
@@ -1708,8 +1724,7 @@ body {
 
 .button-favorite-active:disabled {
   background-color: #e5e5e5;
-  color: #e5e5e5;
-  opacity: 0.3;
+  color: #ffffff;
 }
 
 .card-stars {
