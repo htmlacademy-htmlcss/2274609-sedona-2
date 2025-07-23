@@ -733,14 +733,16 @@ body {
 }
 
 .modal-close-button:hover {
-  background-color: #e6e6e6;
+  background-color: #e5e5e5;
 }
 
 .modal-close-button:focus-visible {
+  background-color: #e5e5e5;
   outline: 3px solid #83b3d3;
 }
 
 .modal-close-button:active {
+  background-color: #e5e5e5;;
   color:rgba(0, 0, 0, 0.3);
 }
 
@@ -848,7 +850,7 @@ body {
   padding-top: 12px;
   padding-right: 45px;
   padding-bottom: 12px;
-  padding-left: 12px;
+  padding-left: 20px;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
@@ -863,16 +865,18 @@ body {
 }
 
 .control-booking-input:hover {
-  background-color: #e6e6e6;
+  background-color: #e5e5e5;
 }
 
 .control-booking-input:focus-visible {
   outline: 3px solid #83b3d3;
   border-radius: 4px;
+  background-color: #e5e5e5;
 }
 
 .control-booking-input:disabled {
-  background-color: #e5e5e5;
+  background-color: #999999;
+  opacity: 0.3;
 }
 
 .form-booking-guests {
@@ -932,6 +936,7 @@ body {
 .button-count:focus-visible,
 .field-guests:focus-visible {
   position: relative;
+  color: #000000;
   outline: 3px solid #82b3d3;
   border-radius: 4px;
 }
@@ -940,9 +945,11 @@ body {
   color: rgba(117,97,87, 0.2);
 }
 
-.button-count:disabled {
-  background-color: #e5e5e5;
+.button-count:disabled,
+.field-guests:disabled {
+  background-color: #999999;
   color: #e5e5e5;
+  opacity: 0.3;
 }
 
 .control-children {
